@@ -1,0 +1,56 @@
+﻿<base:AbstractPage
+    x:Class="VideoManager.Sources.Pages.MainPage"
+    xmlns:base="using:VideoManager.Sources.Pages.Abstracts"
+    xmlns:entities="using:Core.Model.Entities"
+    xmlns:controls="using:Controls"
+    xmlns:templates="using:VideoManager.Sources.DataTemplates"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Style="{StaticResource PageStyle}"
+    DataContext="{Binding MainViewModel, Source={StaticResource Locator}}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <RelativePanel Grid.Row="0"
+                       Grid.Column="0">
+
+            <TextBlock Style="{StaticResource TextBlockTitleStyle}"
+                       Text="{Binding Title}" />
+
+            <Button Margin="0, 0, 10, 0"
+                    Content="Refresh"
+                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    Command="{Binding RefreshCommand}" />
+
+        </RelativePanel>
+
+        <ListView Grid.Row="1"
+                  Grid.Column="0"
+                  SelectionMode="Single"
+                  ItemsSource="{Binding Videos, Mode=TwoWay}"
+                  SelectedItem="{Binding SelectedVideo, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="entities:Video">
+                    <templates:VideoItemTemplate />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <controls:BusyIndicatorControl Grid.Row="1"
+                                       Grid.Column="0"
+                                       Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+    </Grid>
+    
+</base:AbstractPage>

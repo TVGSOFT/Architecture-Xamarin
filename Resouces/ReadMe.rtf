@@ -1,0 +1,15 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 - Design Pattern use in project:\
+1. MVVM (Model - View - ViewModel): use MVVM Light toolkit to support MVVM in project.\
+2. IoC (Inversion of Control)\
+3. Observer (Use in Data binding).\
+\
+- All platform:\
+1. Need implement INavigationService, IDialogService to suitable new update of each platform.\
+2. Extend ViewModelLocator to config Page View in NavigationService and DialogService. (only for Android and UWP - iOS use segue so don\'92t need config it.)\
+3. Initialize ViewModelLocator in file Application on all platform.}

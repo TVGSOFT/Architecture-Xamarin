@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- App Color -->
+  <color name="colorPrimary">#ba5012</color>
+  <color name="colorPrimaryDark">#ba5012</color>
+  <color name="colorAccent">#ba5012</color>
+
+  <!--Color SwipeRefreshLayout-->
+  <color name="color_scheme_1">#33B5E5</color>
+  <color name="color_scheme_2">#99CC00</color>
+  <color name="color_scheme_3">#FFBB33</color>
+  <color name="color_scheme_4">#FF4444</color>
+
+</resources>

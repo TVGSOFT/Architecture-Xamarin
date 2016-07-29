@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <android.support.v7.widget.AppCompatImageView
+                    style="@style/AppImageView.Large"
+                    android:id="@+id/iv_video" />
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/ib_play"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/ic_play_circle_outline_white"
+                    android:contentDescription="@string/contentDescription" />
+            </FrameLayout>
+            <Widgets.AppTextView
+                style="@style/AppTextViewStyle.Large"
+                android:id="@+id/tv_title"
+                android:layout_margin="10dp" />
+            <Widgets.AppTextView
+                style="@style/AppTextViewStyle.Small"
+                android:id="@+id/tv_subtitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

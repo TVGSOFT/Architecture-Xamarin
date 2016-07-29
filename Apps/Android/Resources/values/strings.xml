@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  <!--Base String-->
+	<string name="app_name">VideoManager</string>
+  <string name="contentDescription">Description</string>
+  
+  <!--Main Activity-->
+  <string name="no_video_found">No Video Found</string>
+  
+</resources>

@@ -1,0 +1,67 @@
+﻿<resources>
+
+  <!--App Themes-->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:textColorPrimary">@android:color/white</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar.Fullscreen">
+    <item name="android:windowFullscreen">true</item>
+  </style>
+
+  <style name="AppThemeDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textColorPrimary">@android:color/black</item>
+    <item name="android:background">@android:color/white</item>
+  </style>
+  
+  <!--Widget Styles-->
+  <style name="AppTextViewStyle">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@android:color/black</item>
+    <item name="fontName">@string/helvetica_neue_light</item>
+  </style>
+
+  <style name="AppTextViewStyle.Large">
+    <item name="android:textSize">10pt</item>
+  </style>
+
+  <style name="AppTextViewStyle.Small">
+    <item name="android:textSize">8pt</item>
+  </style>
+
+  <style name="AppTextViewStyle.NoVideoFound">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">16pt</item>
+    <item name="android:text">@string/no_video_found</item>
+    <item name="android:gravity">center</item>
+    <item name="fontName">@string/helvetica_neue_bold</item>
+  </style>
+
+  <style name="AppImageView">
+    <item name="android:contentDescription">@string/contentDescription</item>
+    <item name="android:scaleType">centerCrop</item>
+  </style>
+
+  <style name="AppImageView.Large">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:adjustViewBounds">true</item>
+  </style>
+  
+  <style name="AppImageView.Small">
+    <item name="android:layout_width">200dp</item>
+    <item name="android:layout_height">100dp</item>
+  </style>
+
+</resources>

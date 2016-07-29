@@ -1,0 +1,80 @@
+﻿<base:AbstractPage
+    x:Class="VideoManager.Sources.Pages.VideoDetailPage"
+    xmlns:base="using:VideoManager.Sources.Pages.Abstracts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Style="{StaticResource PageStyle}"
+    DataContext="{Binding VideoDetailViewModel, Source={StaticResource Locator}}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+
+            <Button Style="{StaticResource ButtonBackStyle}"
+                    Command="{Binding BackCommand}" />
+
+            <TextBlock Style="{StaticResource TextBlockTitleStyle}"
+                       Text="{Binding Title}" />
+
+        </StackPanel>
+
+        <RelativePanel Grid.Row="1"
+                       Grid.Column="0">
+
+            <Image Grid.Row="1"
+                   Grid.Column="0"
+                   Stretch="UniformToFill"
+                   Source="{Binding ThumbnailUrl}" />
+            
+            <Button RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Command="{Binding PlayCommand}"
+                    CommandParameter="{Binding VideoDetail}">
+                <Image Style="{StaticResource ImagePlayStyle}" />
+            </Button>
+
+        </RelativePanel>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    Margin="10, 10, 0, 0">
+
+            <TextBlock Text="{Binding VideoDetail.Video.Title}"
+                       FontSize="16"
+                       Foreground="Black" />
+            <TextBlock Text=" - "
+                       FontSize="16"
+                       Foreground="Black" />
+            <TextBlock Text="{Binding VideoDetail.Video.Studio}"
+                       FontSize="16"
+                       Foreground="Black" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="{Binding VideoDetail.Video.Subtitle}"
+                   FontSize="12"
+                   Foreground="Black"
+                   TextWrapping="Wrap"
+                   Margin="10, 10, 0, 0" />
+        
+    </Grid>
+    
+</base:AbstractPage>

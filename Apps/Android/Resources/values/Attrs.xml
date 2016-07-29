@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  <declare-styleable name="AppTextView">
+    <attr name="fontName" format="string" value="@string/helvetica_neue_light"/>
+    <attr name="isUnderLine" format="boolean" value="false"/>
+    <attr name="isSelected" format="boolean" value="false"/>
+  </declare-styleable>
+
+</resources>

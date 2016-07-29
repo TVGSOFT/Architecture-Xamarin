@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:foreground="?attr/selectableItemBackground">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/AppImageView.Small"
+            android:id="@+id/iv_video" />
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/ib_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_play_circle_outline_white"
+            android:background="@null"
+            android:contentDescription="@string/contentDescription" />
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp">
+        <Widgets.AppTextView
+            style="@style/AppTextViewStyle.Large"
+            android:id="@+id/tv_title" />
+        <Widgets.AppTextView
+            style="@style/AppTextViewStyle.Small"
+            android:id="@+id/tv_studio"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</LinearLayout>
